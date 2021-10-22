@@ -34,7 +34,7 @@ sudo apt autoclean  -y
 
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 
-bluetooth_mac_addr = `hcitool dev | grep -o "[[:xdigit:]:]\{11,17\}"`
+bluetooth_mac_addr=`hcitool dev | grep -o "[[:xdigit:]:]\{11,17\}"`
 
 gh auth login --with-token < ~/.token
 gh ssh-key add ~/.ssh/id_rsa.pub --title $bluetooth_mac_addr
