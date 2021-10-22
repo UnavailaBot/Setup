@@ -39,4 +39,11 @@ bluetooth_mac_addr=`hcitool dev | grep -o "[[:xdigit:]:]\{11,17\}"`
 gh auth login --with-token < ~/.token
 gh ssh-key add ~/.ssh/id_rsa.pub --title $bluetooth_mac_addr
 
+echo "### Setup Finished ###"
+
+echo "### Downloading Code Base ###"
+
+git clone git@github.com:UnavailaBot/Base.git ~/Project/Base
+
 echo "### All Done! ###"
+
