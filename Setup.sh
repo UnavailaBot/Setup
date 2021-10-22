@@ -33,7 +33,5 @@ sudo apt autoremove -y
 sudo apt autoclean  -y
 
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
-echo "### Add Below SSH Key to GitHub ###"
-cat ~/.ssh/id_rsa.pub
-echo "### Add Above SSH Key to GitHub ###"
+
 echo "### All Done! ###"
