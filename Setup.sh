@@ -25,8 +25,7 @@ sudo python3 -m install warble
 python3      -m pip install metawear
 sudo python3 -m pip install metawear
 
-echo "deb [arch=$(dpkg --print-architecture) https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
+echo "deb https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt install gh
 
 sudo apt autoremove -y
