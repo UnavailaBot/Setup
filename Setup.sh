@@ -16,7 +16,7 @@ sudo apt-get install -y python3.6
 sudo apt     install -y bluetooth pi-bluetooth bluez blueman
 sudo apt     install -y python3-pip
 
-/usr/bin/python3 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade pip
 
 pip3 install pip --upgrade
 pip3 install --upgrade pip setuptools
