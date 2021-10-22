@@ -35,11 +35,14 @@ sudo apt autoclean  -y
 
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 
-read -p "GitHub Access Token: " $token
+echo "GitHub Access Token: "
+read $token
 echo $token > ~/.token
-read -p "Production Env or Testing Env (prod/test): " $env
-read -p "Device Label (0, 1, 2 ...): " label
+echo "Production Env or Testing Env (prod/test): "
+read env
+echo "Device Label (0, 1, 2 ...): "
+read label
 gh auth login --with-token < ~/.token
-gh ssh-key add ~/.ssh/id_rsa.pub --title "${env}-pi-${label}"
+gh ssh-key add ~/.ssh/id_rsa.pub --title "$env-pi-$label"
 
 echo "### All Done! ###"
