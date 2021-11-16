@@ -24,6 +24,9 @@ python3      -m pip install warble
 sudo python3 -m install warble
 python3      -m pip install metawear
 sudo python3 -m pip install metawear
+python3      -m pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+python3      -m pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 echo "deb https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 sudo apt install gh
@@ -35,7 +38,7 @@ ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 
 bluetooth_mac_addr=`hcitool dev | grep -o "[[:xdigit:]:]\{11,17\}"`
 
-gh auth login --with-token < ~/.token
+gh auth login --with-token < ~/.github-token
 gh ssh-key add ~/.ssh/id_rsa.pub --title $bluetooth_mac_addr
 
 echo "### Setup Finished ###"
