@@ -7,14 +7,14 @@ sudo apt     upgrade  -y
 sudo apt-get update   -y
 sudo apt-get upgrade  -y
 
-sudo apt-get install -y build-essential
-sudo apt-get install -y bluez
-sudo apt-get install -y libboost-all-dev
-sudo apt-get install -y libbluetooth-dev
+sudo apt-get install build-essential  -y
+sudo apt-get install bluez            -y
+sudo apt-get install libboost-all-dev -y
+sudo apt-get install libbluetooth-dev -y
 
-sudo apt-get install -y python3.6
-sudo apt     install -y bluetooth pi-bluetooth bluez blueman
-sudo apt     install -y python3-pip
+sudo apt-get install python3.6                            -y
+sudo apt     install bluetooth pi-bluetooth bluez blueman -y
+sudo apt     install python3-pip                          -y
 
 sudo python3 -m pip install --upgrade pip
 
@@ -48,4 +48,3 @@ echo "### Downloading Code Base ###"
 git clone git@github.com:UnavailaBot/Base.git ~/Project/Base
 
 echo "### All Done! ###"
-
